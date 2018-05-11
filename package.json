@@ -2,7 +2,7 @@
   "name": "masq-common",
   "version": "1.0.0",
   "description": "Common utility lib for Masq",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QwantResearch/masq-common.git"
@@ -11,6 +11,10 @@
     "masq",
     "utility"
   ],
+  "scripts": {
+    "build": "babel src --presets env --out-file dist/index.js",
+    "prepublish": "npm run build"
+  },
   "devDependencies": {
     "babelify": "^8.0.0",
     "babel-plugin-transform-runtime": "^6.23.0",
