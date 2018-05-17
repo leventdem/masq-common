@@ -3,6 +3,7 @@
 var ERRORS = {
   NOLOGGEDUSER: 'No logged user',
   WRONGPARAMETER: 'One or several parameters are wrong',
+  WRONGPASSPHRASE: 'The given passphrase is wrong',
   NOURLPROVIDED: 'No url provided',
   EMPTYUSERLIST: 'User list is empty',
   NOUSERNAME: 'No username provided',
