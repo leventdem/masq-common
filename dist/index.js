@@ -6,6 +6,7 @@ var ERRORS = {
   NOURLPROVIDED: 'No url provided',
   EMPTYUSERLIST: 'User list is empty',
   NOUSERNAME: 'No username provided',
+  NOPASSPHRASE: 'No passphrase provided',
   EXISTINGUSERNAME: 'The username already exists',
   EXISTINGURL: 'The application url already exists',
   FUNCTIONNOTDEFINED: 'The function is not defined',
