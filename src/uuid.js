@@ -1,13 +1,18 @@
 /**
- * Genreate a uuid
- *
+ * Genreate a UUID
+ * @param {int} len - Length of string to be generated
  * @returns {string} - The generated uuid
  */
-const generateUUID = () => {
-  return 'xxxx-xxxx-xxxx-xxxx-xxxx'.replace(/[x]/g, (c) => {
-    const r = Math.random() * 16 | 0
-    return (r & 0x3 | 0x8).toString(16)
-  })
+const generateUUID = (len = 32) => {
+  let chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('')
+  if (typeof len !== "number") {
+    len = 32
+  }
+  let str = ''
+  for (let i = 0; i < len; i++) {
+      str += chars[Math.floor(Math.random() * chars.length)]
+  }
+  return str
 }
 
 module.exports.generateUUID = generateUUID
