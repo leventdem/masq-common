@@ -6,7 +6,7 @@
 const generateUUID = (len = 32) => {
   let chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('')
   if (typeof len !== "number") {
-    len = Math.floor(Math.random() * chars.length)
+    len = 32
   }
   let str = ''
   for (let i = 0; i < len; i++) {
