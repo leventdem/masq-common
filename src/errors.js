@@ -15,7 +15,9 @@ const ERRORS = {
   NOTOKEN: 'Token does not exist',
   BADTOKEN: 'Token is not valid',
   BADREQUEST: 'Bad request',
-  NOTAUTHORIZED: 'Not authorized'
+  NOTAUTHORIZED: 'Not authorized',
+  ENCRYPTIONERROR: 'Encryption error',
+  DECRYPTIONERROR: 'Decryption error'
 }
 
 /**
