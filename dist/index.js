@@ -77,15 +77,22 @@ module.exports.checkObject = checkObject;
 'use strict';
 
 /**
- * Genreate a uuid
- *
+ * Genreate a UUID
+ * @param {int} len - Length of string to be generated
  * @returns {string} - The generated uuid
  */
 var generateUUID = function generateUUID() {
-  return 'xxxx-xxxx-xxxx-xxxx-xxxx'.replace(/[x]/g, function (c) {
-    var r = Math.random() * 16 | 0;
-    return (r & 0x3 | 0x8).toString(16);
-  });
+  var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;
+
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
+  if (typeof len !== "number") {
+    len = 32;
+  }
+  var str = '';
+  for (var i = 0; i < len; i++) {
+    str += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return str;
 };
 
 module.exports.generateUUID = generateUUID;
