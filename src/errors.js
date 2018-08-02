@@ -17,7 +17,8 @@ const ERRORS = {
   BADREQUEST: 'Bad request',
   NOTAUTHORIZED: 'Not authorized',
   ENCRYPTIONERROR: 'Encryption error',
-  DECRYPTIONERROR: 'Decryption error'
+  DECRYPTIONERROR: 'Decryption error',
+  NOIMPORTRULES: 'No import rules provided'
 }
 
 /**
