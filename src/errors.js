@@ -40,13 +40,15 @@ const ERRORS = {
  */
 const checkObject = (obj, parameters) => {
   for (let i in parameters) {
-    if (!obj[parameters[i]] || obj[parameters[i]] === '') {
-      const error = {
-        message: `The parameter ${parameters[i]} is required`,
-        name: ERRORS.WRONGPARAMETER,
-        error: true
+    if (typeof obj[parameters[i]] !== 'boolean') {
+      if (!obj[parameters[i]] || obj[parameters[i]] === '') {
+        const error = {
+          message: `The parameter ${parameters[i]} is required`,
+          name: ERRORS.WRONGPARAMETER,
+          error: true
+        }
+        throw error
       }
-      throw error
     }
   }
 }
