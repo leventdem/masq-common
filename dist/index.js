@@ -41,13 +41,15 @@ var ERRORS = {
    */
 };var checkObject = function checkObject(obj, parameters) {
   for (var i in parameters) {
-    if (!obj[parameters[i]] || obj[parameters[i]] === '') {
-      var error = {
-        message: 'The parameter ' + parameters[i] + ' is required',
-        name: ERRORS.WRONGPARAMETER,
-        error: true
-      };
-      throw error;
+    if (typeof obj[parameters[i]] !== 'boolean') {
+      if (!obj[parameters[i]] || obj[parameters[i]] === '') {
+        var error = {
+          message: 'The parameter ' + parameters[i] + ' is required',
+          name: ERRORS.WRONGPARAMETER,
+          error: true
+        };
+        throw error;
+      }
     }
   }
 };
